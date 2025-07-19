@@ -1,0 +1,6 @@
+data/
+models/
+*.csv
+*.npy
+*.keras
+*.json
