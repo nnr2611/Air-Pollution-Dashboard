@@ -64,9 +64,6 @@ def load_models():
     xgb_model.load_model(XGB_MODEL_PATH)
     return lstm_model, xgb_model
 
-def load_scaler():
-    download_file_from_url(SCALER_URL, SCALER_PATH)
-    return joblib.load(SCALER_PATH)
 
 def get_latest_prediction_info(df, hybrid_preds):
     latest_idx = np.where(~np.isnan(hybrid_preds))[0][-1]
