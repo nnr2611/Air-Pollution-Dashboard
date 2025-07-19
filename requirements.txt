@@ -1,10 +1,9 @@
-tensorflow
+flask
 numpy
 pandas
-xgboost
-scikit-learn
-flask
-joblib
-keras
 matplotlib
-seaborn
+tensorflow
+scikit-learn
+xgboost
+joblib
+requests
