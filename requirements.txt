@@ -1,9 +1,9 @@
 flask
-numpy
 pandas
-matplotlib
+numpy
 tensorflow
-scikit-learn
 xgboost
+scikit-learn
+matplotlib
 joblib
 requests
