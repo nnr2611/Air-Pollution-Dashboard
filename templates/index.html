@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Air Quality Forecast Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f6f8;
+            padding-top: 40px;
+        }
+        h1, h2 {
+            font-weight: 600;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .chart-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        .footer {
+            margin-top: 60px;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <h1>🌍 Air Quality Forecast Dashboard</h1>
+        <p class="lead">Predicting PM2.5 concentration using LSTM and XGBoost hybrid models</p>
+    </div>
+
+    <!-- Forecast Summary -->
+    <div class="row mb-4">
+        <div class="col-md-6 offset-md-3 text-center">
+            <div class="alert alert-info" role="alert">
+                <strong>Latest Forecast:</strong> {{ latest_prediction }} µg/m³ PM2.5 <br>
+                <strong>Site:</strong> {{ latest_site }} | <strong>Date:</strong> {{ latest_date }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart Display -->
+    <div class="row">
+        <div class="col-md-12 chart-container">
+            <h2 class="text-center mb-4">PM2.5 Forecast Over Time</h2>
+            <img src="data:image/png;base64,{{ chart }}" alt="PM2.5 Forecast Chart" class="img-fluid">
+        </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="text-center mt-4">
+        <a href="/charts" class="btn btn-primary">View Detailed Charts</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 Air Pollution Forecasting · Built with Flask and ML
+    </div>
+</div>
+
+</body>
+</html>
